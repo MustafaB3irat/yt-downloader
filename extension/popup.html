@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/32.png" alt="" width="20" height="20">
+    <h1>YT Downloader</h1>
+    <nav>
+      <button data-tab="queue" class="on">Downloads</button>
+      <button data-tab="settings">Settings</button>
+    </nav>
+  </header>
+
+  <section id="queue">
+    <div id="hostWarn" class="warn" hidden></div>
+    <div id="current" hidden>
+      <button id="dlNow" class="primary">Download this video</button>
+      <button id="dlAudio" class="secondary">MP3</button>
+    </div>
+    <ul id="jobs"></ul>
+    <p id="empty" class="muted">Open a YouTube video and tap the blue <b>Download</b> button under the player.</p>
+    <footer>
+      <button id="openFolder" class="link">Open downloads folder</button>
+      <button id="clear" class="link">Clear finished</button>
+    </footer>
+  </section>
+
+  <section id="settings" hidden>
+    <label class="field">
+      <span>Save to</span>
+      <span class="folder"><code id="dir">…</code><button id="chooseDir" class="secondary">Change</button></span>
+    </label>
+    <label class="field">
+      <span>Download button quality</span>
+      <select data-key="defaultQuality">
+        <option value="best">Best available</option>
+        <option value="2160">4K (2160p)</option>
+        <option value="1440">2K (1440p)</option>
+        <option value="1080">1080p</option>
+        <option value="720">720p</option>
+        <option value="480">480p</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Audio format</span>
+      <select data-key="audioFormat">
+        <option value="mp3">MP3</option>
+        <option value="m4a">M4A · AAC (original, no re-encode)</option>
+        <option value="opus">Opus (best original, no re-encode)</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>MP3 bitrate</span>
+      <select data-key="audioQuality">
+        <option value="320">320 kbps</option>
+        <option value="256">256 kbps</option>
+        <option value="192">192 kbps</option>
+        <option value="128">128 kbps</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Subtitles with video</span>
+      <select data-key="subtitles">
+        <option value="off">Off</option>
+        <option value="srt">Separate .srt file</option>
+        <option value="embed">Embedded in MP4</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" data-key="preferCompatible"> Prefer H.264/AAC when resolution, fps and HDR are equal (plays in QuickTime &amp; editors)</label>
+    <label class="check"><input type="checkbox" data-key="embedThumbnail"> Embed thumbnail &amp; metadata</label>
+    <label class="check"><input type="checkbox" data-key="useCookies"> Use my Chrome login for age-restricted / members videos</label>
+    <label class="check"><input type="checkbox" data-key="hoverMenu"> Show quality menu on hover</label>
+    <label class="check"><input type="checkbox" data-key="notifications"> Mac notification when done</label>
+    <label class="field">
+      <span>yt-dlp channel</span>
+      <select data-key="updateChannel">
+        <option value="nightly">Nightly (fastest YouTube fixes)</option>
+        <option value="stable">Stable</option>
+      </select>
+    </label>
+    <div class="health">
+      <div><span class="muted">Helper</span> <b id="hVer">…</b></div>
+      <div><span class="muted">yt-dlp</span> <b id="hYt">…</b></div>
+      <div><span class="muted">ffmpeg</span> <b id="hFf">…</b></div>
+      <div><span class="muted">JS runtime</span> <b id="hJs">…</b></div>
+      <button id="update" class="secondary">Update yt-dlp now</button>
+    </div>
+    <p class="muted small">Shortcuts: ⌥⇧D video, ⌥⇧A MP3 · Right-click any YouTube link to download.</p>
+  </section>
+  <script src="shared/ytd.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

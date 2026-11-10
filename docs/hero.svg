@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="420" viewBox="0 0 880 420" role="img" aria-label="Download button under a YouTube video with its quality menu open">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .bg { fill: #f6f8fa; } .frame { fill: #0f0f0f; } .card { fill: #fff; stroke: #e5e5e5; }
+    .fg { fill: #0f0f0f; } .muted { fill: #606060; } .line { stroke: #e5e5e5; } .chip { fill: #f2f2f2; }
+    .sel { fill: #eef4ff; } .ghost { fill: #e5e5e5; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; } .frame { fill: #000; } .card { fill: #282828; stroke: #3f3f3f; }
+      .fg { fill: #f1f1f1; } .muted { fill: #aaa; } .line { stroke: #3f3f3f; } .chip { fill: #3e3e3e; }
+      .sel { fill: #1e2a44; } .ghost { fill: #3f3f3f; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="v" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/><stop offset=".55" stop-color="#0f766e"/><stop offset="1" stop-color="#14532d"/>
+    </linearGradient>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity=".22"/></filter>
+  </defs>
+
+  <rect class="bg" width="880" height="420" rx="16"/>
+
+  <!-- video -->
+  <rect x="32" y="32" width="440" height="248" rx="12" fill="url(#v)"/>
+  <path d="M60 250 L150 170 L210 215 L290 140 L444 250 Z" fill="#000" opacity=".25"/>
+  <circle cx="252" cy="140" r="30" fill="#000" opacity=".45"/>
+  <path d="M243 125 L268 140 L243 155 Z" fill="#fff"/>
+  <rect x="44" y="262" width="416" height="4" rx="2" fill="#fff" opacity=".3"/>
+  <rect x="44" y="262" width="170" height="4" rx="2" fill="#ef4444"/>
+
+  <!-- title + action row -->
+  <rect class="ghost" x="32" y="296" width="300" height="14" rx="7"/>
+  <rect class="ghost" x="32" y="318" width="190" height="10" rx="5" opacity=".7"/>
+
+  <g transform="translate(32 346)">
+    <rect width="180" height="36" rx="8" fill="#2563eb"/>
+    <path d="M144 0 h28 a8 8 0 0 1 8 8 v20 a8 8 0 0 1 -8 8 h-28 z" fill="#1d4ed8"/>
+    <path d="M22 11 v9 m-4 -4 l4 4 l4 -4 M16 25 h12" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="36" y="23" font-size="14" font-weight="500" fill="#fff">Download</text>
+    <rect x="104" y="8" width="34" height="20" rx="4" fill="#fff" opacity=".2"/>
+    <text x="121" y="22" font-size="11" font-weight="600" fill="#fff" text-anchor="middle">Best</text>
+    <circle cx="162" cy="12" r="1.8" fill="#fff"/><circle cx="162" cy="18" r="1.8" fill="#fff"/><circle cx="162" cy="24" r="1.8" fill="#fff"/>
+
+    <!-- status pill -->
+    <g transform="translate(192 0)">
+      <rect class="chip" width="260" height="36" rx="18"/>
+      <circle cx="20" cy="18" r="10" fill="#16a34a"/>
+      <path d="M15.5 18 l3 3 l6 -6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="38" y="23" font-size="13" font-weight="600" class="fg">Saved</text>
+      <text x="80" y="23" font-size="13" class="muted">· MP4 · 1.9 GB</text>
+      <rect x="178" y="4" width="60" height="28" rx="14" fill="#2563eb"/>
+      <path d="M190 12 l8 6 l-8 6 z" fill="#fff"/>
+      <text x="203" y="23" font-size="13" font-weight="500" fill="#fff">Open</text>
+      <path d="M246 13 l6 6 m0 -6 l-6 6" stroke="#888" stroke-width="1.6" stroke-linecap="round" transform="translate(0 2)"/>
+    </g>
+  </g>
+
+  <!-- quality menu -->
+  <g transform="translate(500 32)" filter="url(#sh)">
+    <rect class="card" width="348" height="356" rx="12"/>
+  </g>
+  <g transform="translate(500 32)">
+    <rect x="16" y="14" width="56" height="32" rx="6" fill="url(#v)"/>
+    <rect class="ghost" x="84" y="18" width="170" height="10" rx="5"/>
+    <text x="84" y="44" font-size="11" class="muted">Saves to ~/Downloads/YouTube</text>
+    <line class="line" x1="0" y1="60" x2="348" y2="60"/>
+    <text x="16" y="82" font-size="11" font-weight="600" class="muted">VIDEO · MP4</text>
+
+    <rect class="sel" x="8" y="92" width="332" height="34" rx="6"/>
+    <text x="40" y="114" font-size="13" font-weight="600" class="fg">Best available</text>
+    <path d="M22 101 l3 6 l6.5 1 l-4.7 4.6 l1.1 6.5 l-5.9 -3.1 l-5.9 3.1 l1.1 -6.5 l-4.7 -4.6 l6.5 -1 z" fill="#f59e0b"/>
+    <rect x="152" y="101" width="26" height="16" rx="4" fill="#7c3aed"/><text x="165" y="113" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">4K</text>
+    <rect x="182" y="101" width="38" height="16" rx="4" fill="#0891b2"/><text x="201" y="113" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">60fps</text>
+    <rect x="224" y="101" width="32" height="16" rx="4" fill="#d97706"/><text x="240" y="113" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">HDR</text>
+    <text x="328" y="114" font-size="12" class="muted" text-anchor="end">2160p</text>
+
+    <g font-size="13">
+      <text x="40" y="148" class="fg">2160p</text>
+      <rect x="152" y="137" width="26" height="16" rx="4" fill="#7c3aed"/><text x="165" y="149" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">4K</text>
+      <rect x="182" y="137" width="38" height="16" rx="4" fill="#0891b2"/><text x="201" y="149" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">60fps</text>
+      <text x="328" y="148" font-size="12" class="muted" text-anchor="end">1.9 GB</text>
+
+      <text x="40" y="180" class="fg">1440p</text>
+      <rect x="152" y="169" width="26" height="16" rx="4" fill="#2563eb"/><text x="165" y="181" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">2K</text>
+      <rect x="182" y="169" width="38" height="16" rx="4" fill="#0891b2"/><text x="201" y="181" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">60fps</text>
+      <text x="328" y="180" font-size="12" class="muted" text-anchor="end">980 MB</text>
+
+      <text x="40" y="212" class="fg">1080p</text>
+      <rect x="152" y="201" width="26" height="16" rx="4" fill="#16a34a"/><text x="165" y="213" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">HD</text>
+      <text x="328" y="212" font-size="12" class="muted" text-anchor="end">412 MB</text>
+
+      <text x="40" y="244" class="fg">720p</text>
+      <rect x="152" y="233" width="26" height="16" rx="4" fill="#16a34a"/><text x="165" y="245" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">HD</text>
+      <text x="328" y="244" font-size="12" class="muted" text-anchor="end">186 MB</text>
+    </g>
+    <g fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round">
+      <rect x="16" y="139" width="14" height="11" rx="2"/><rect x="16" y="171" width="14" height="11" rx="2"/>
+      <rect x="16" y="203" width="14" height="11" rx="2"/><rect x="16" y="235" width="14" height="11" rx="2"/>
+    </g>
+
+    <line class="line" x1="0" y1="262" x2="348" y2="262"/>
+    <text x="16" y="284" font-size="11" font-weight="600" class="muted">AUDIO</text>
+    <g font-size="13">
+      <text x="40" y="308" class="fg">MP3 · 320 kbps</text><text x="328" y="308" font-size="12" class="muted" text-anchor="end">9.8 MB</text>
+      <text x="40" y="338" class="fg">Opus · best original</text>
+    </g>
+    <g fill="none" stroke="#888" stroke-width="1.6" stroke-linecap="round">
+      <path d="M20 310 v-11 l8 -2 v11"/><circle cx="18" cy="310" r="2.2"/><circle cx="26" cy="308" r="2.2"/>
+      <path d="M20 340 v-11 l8 -2 v11"/><circle cx="18" cy="340" r="2.2"/><circle cx="26" cy="338" r="2.2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YT Downloader",
+  "short_name": "YT Downloader",
+  "version": "1.0.0",
+  "description": "One-click YouTube video, Shorts and MP3 downloads to a folder on your Mac. Powered by yt-dlp.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAydtXVjfeJKkFudsA1XcKaeo741kuhflTD5gXTTRvW+iYzE4hWoNxHuhkDDZhWzouDu7LEprZqrT9XHzkeJ7lCBKTGQS6+7weaWvUCs8RfRC5Jt64h8t9C1ZkflXVUK5BuhraijPTmN4FUFC8yyLQQvqKQnY7HAdAeB8jv/jZDHOsrUBo+r6b9DC1Edq6n0quRMxxYxVXwONn2x7xVPeVAjHZY8P3PEyKLPWrBDkgl+cZY1Mrsg7ftpMJygjAw5La8c6/yHiXmqnzth0kUIbUjZD9aqYF+7zeNPMgHodxcMis6cvkvFqCkr/W8BpvnnrXUgp6IKHV7OZv5y6GCfZtZQIDAQAB",
+  "minimum_chrome_version": "116",
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" }
+  },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["nativeMessaging", "contextMenus", "storage", "tabs", "scripting"],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "content_scripts": [
+    { "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"], "js": ["shared/ytd.js", "content/icons.js", "content/styles.js", "content/page.js", "content/menu.js", "content/status.js", "content/main.js"], "run_at": "document_idle" }
+  ],
+  "commands": {
+    "download-video": { "suggested_key": { "default": "Alt+Shift+D", "mac": "Alt+Shift+D" }, "description": "Download current video" },
+    "download-audio": { "suggested_key": { "default": "Alt+Shift+A", "mac": "Alt+Shift+A" }, "description": "Download current video as MP3" }
+  }
+}

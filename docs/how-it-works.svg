@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150" role="img" aria-label="YouTube page, Chrome extension, Mac helper with yt-dlp and ffmpeg, Downloads folder">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .bg { fill: #f6f8fa; } .card { fill: #fff; stroke: #d0d7de; } .fg { fill: #1f2328; } .muted { fill: #59636e; } .arrow { stroke: #8c959f; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; } .card { fill: #161b22; stroke: #30363d; } .fg { fill: #e6edf3; } .muted { fill: #9198a1; } .arrow { stroke: #6e7681; }
+    }
+  </style>
+  <rect class="bg" width="880" height="150" rx="16"/>
+  <g font-size="14" text-anchor="middle">
+    <rect class="card" x="24" y="35" width="176" height="80" rx="12"/>
+    <rect x="96" y="49" width="32" height="22" rx="6" fill="#ef4444"/><path d="M108 54 l9 6 l-9 6 z" fill="#fff"/>
+    <text x="112" y="92" font-weight="600" class="fg">YouTube page</text>
+    <text x="112" y="107" font-size="11" class="muted">you press Download</text>
+
+    <rect class="card" x="240" y="35" width="176" height="80" rx="12"/>
+    <path d="M318 50 h10 a4 4 0 0 1 8 0 h6 v8 a4 4 0 0 1 0 8 v8 h-24 z" fill="#2563eb"/>
+    <text x="328" y="92" font-weight="600" class="fg">Chrome extension</text>
+    <text x="328" y="107" font-size="11" class="muted">buttons, menu, queue</text>
+
+    <rect class="card" x="456" y="35" width="196" height="80" rx="12"/>
+    <rect x="538" y="49" width="32" height="24" rx="4" fill="#0d1117"/><text x="554" y="65" font-size="10" fill="#7ee787" font-family="ui-monospace, Menlo, monospace">&gt;_</text>
+    <text x="554" y="92" font-weight="600" class="fg">Mac helper</text>
+    <text x="554" y="107" font-size="11" class="muted">yt-dlp + ffmpeg, on your Mac</text>
+
+    <rect class="card" x="692" y="35" width="164" height="80" rx="12"/>
+    <path d="M758 51 h12 l4 4 h16 v18 h-32 z" fill="#54aeff"/>
+    <text x="774" y="92" font-weight="600" class="fg">Downloads folder</text>
+    <text x="774" y="107" font-size="11" class="muted">~/Downloads/YouTube</text>
+  </g>
+  <g class="arrow" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M206 75 h28 m-6 -6 l6 6 l-6 6"/><path d="M422 75 h28 m-6 -6 l6 6 l-6 6"/><path d="M658 75 h28 m-6 -6 l6 6 l-6 6"/>
+  </g>
+  <text x="436" y="134" font-size="11" class="muted" text-anchor="middle">Nothing leaves your Mac except the download from YouTube itself.</text>
+</svg>

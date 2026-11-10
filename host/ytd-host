@@ -1,0 +1,4 @@
+#!/bin/bash
+# Chrome launches this. It must not print anything except the protocol on stdout.
+DIR="$(cd "$(dirname "$0")" && pwd)"
+exec "$HOME/Library/Application Support/YTDownloader/venv/bin/python" "$DIR/host.py" "$@"
